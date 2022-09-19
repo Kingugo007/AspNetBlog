@@ -1,0 +1,161 @@
+﻿@model DetailsViewModel
+@{
+    ViewData["Title"] = "Home Page";
+    ViewBag.Identity = Model.Identity;
+}
+
+<section class="hero">
+    <div class="bg-img">
+        <img src="~/images/h2.png" alt="hero" />
+    </div>
+</section>
+
+<section class="Section-2">
+    <div class="info-heading">
+        <h1>Our gloves are holding hands with research teams at the American Cancer Society.</h1>
+        <h5>Gloves with a PurposeTM from SYNA Medical</h5>
+    </div>  
+    <div class="spacer"></div>
+    <p>Since 1946, the American Cancer Society (ACS), the nation’s #1 trusted source for cancer information, has invested more than $5 billion in cancer research to find better treatments, uncover causation factors, and improve patient care and quality of life. 
+    SYNA Medical is a proud supporter of ACS and with our breakthrough Gloves with a PurposeTM campaign, you can be too.</p>
+</section>
+
+@foreach(var comment in Model.Comments)
+{
+  <section class="Section-3">
+  <div class="left">
+    <div class="img-container">
+  <img src="@comment.Image" alt="susan" asp-append-version="true" />
+    </div>  
+  </div>
+  <div class="right">
+    <a asp-action="profile" asp-controller="home" asp-route-id="@comment.Id"><h1>@comment.FullName</h1></a>
+    <p>@comment.Content </p>
+  </div>  
+</section>  
+}
+<section class="Section-4">
+<div class="img">
+    <img src="~/images/susan.png" alt="susan" />
+</div>
+<div class="info-4">
+    <h1>SUSAN VADAPARAMPIL, PHD, MPH</h1>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+       Lorem Ipsum is simply dummy text of the printing and Lorem ipsum dolor sit amet,
+       consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+       consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+       Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>  
+</section>
+
+<section class="Section-5">
+    @if(Model.Posts != null)
+    {
+   foreach(var post in Model.Posts){
+ var photoPath = "~/images/" + (post.Image ?? "noimage.jpg");
+ <div class="left">
+<div class="img-container">
+<img src="@photoPath" alt="Doctors-glove" asp-append-version="true"/>
+</div>
+
+<h3>@post.Title</h3>
+<p class="short-text">@post.Content</p>
+<a asp-controller="home" asp-action="details" asp-route-id="@post.Id" class="link">Read More>></a>
+            </div>
+        }
+    }
+    else
+    {
+        <h1>No articles</h1> 
+    }   
+ 
+</section>
+    
+<section class="Section-6">
+<div class="content">
+    <p>Woman cancer</p>
+    <h1>Close the Care Gap</h1>
+    <a href="#" class="btn btn-light">Donate</a>
+    <div class="img-frame">
+        <img src="~/images/frame.png" alt="frame" />
+    </div>
+</div>
+    
+<div class="content">
+    <p>Woman cancer</p>
+    <h1>Close the care Gap</h1>
+    <a href="#" class="btn btn-light">Donate</a>
+    <div class="img-frame">
+        <img src="~/images/frame.png" alt="frame" />
+    </div>
+</div>
+</section>
+
+<section class="cta">
+<div class="cta-container">
+    <div class="cta-content">
+        <h1>Gloves with a porpouse</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+         Lorem Ipsum is simply dummy text of the printing and Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam inventore animi vel. Repellat totam
+         perspiciatis ad quas facilis vero aut odio cumque animi quibusdam, vel repellendus assumenda, error quidem unde?</p>
+        <a href="#" class="btn btn-light">Learn more</a>
+    </div>
+        
+    <div class="img-container">
+        <img src="~/images/gloves-box.png" alt="">
+    </div>
+</div>
+</section>
+<section class="slide-image">
+    <div class="slide-container">
+       <p>Woman Cancer</p>
+       <h1>Close the Care Gap</h1>
+       <a href="#" class="btn btn-light">Donate</a>
+       <img src="~/images/frame.png" alt="" />
+    </div>
+</section>
+@*<section class="number">
+<div class="col new-research">
+  <div class="num">
+    <span class="big-num">$@Model.Statistic.NR.ToString()</span>
+ </div>
+<h2>New Research</h2>
+</div>
+<div class="col cancer-support">
+    <div class="num">
+    <span class="big-num">%@Model.Statistic.CS.ToString()</span>
+    </div>
+<h2>Cancer support</h2>
+</div>
+<div class="col cancer-research">
+ <div class="num">
+    <span class="big-num">@Model.Statistic.CR.ToString()</span>
+  </div>
+<h2>Cancer Research</h2>
+</div>
+</section>*@
+
+
+<section class="Section-7">
+<div class="col">
+<img src="~/images/mail-icon.png" alt="six" />
+<h3>It was popularised in the 1960s with</h3>
+<a class="link"> Read More> </a>
+</div>
+<div class="col">
+<img src="~/images/recycle-icon.png" alt="" />
+<h3>Lorem Ipsum</h3>
+<a class="link"> Read More> </a>
+</div>
+<div class="col">
+<img src="~/images/pic-icon.png" alt="" />
+<h3>Aldus PageMaker including</h3>
+<a class="link"> Read More> </a>
+ </div>
+</section>
+
+
+@section Scripts {
+     <script type="text/javascript" src="~/js/index.js"></script>
+}

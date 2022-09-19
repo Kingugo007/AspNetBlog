@@ -1,0 +1,22 @@
+﻿@model DashboardViewModel
+@{
+	ViewData["Title"] = "User Dashboard";
+	ViewBag.Identity = Model.Identity;
+}
+
+<section class="profile-wrapper">
+    <div class="profile">
+    <h1>Dashboard</h1>
+    <div class="doc-info">
+        <div class="doc-img">
+         <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Doctors image" asp-append-version="true" />
+        </div>
+        <div class="doc-details">
+        <h2>@Model.user.FirstName</h2>
+        <h5>Email : @Model.user.Email</h5>
+        <h5>First Name : @Model.user.FirstName</h5>
+        <h5>Last Name : @Model.user.LastName</h5>
+        </div>
+    </div> 
+</div>
+</section>

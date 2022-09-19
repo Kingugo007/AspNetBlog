@@ -1,0 +1,40 @@
+﻿@model EditViewModel
+@{
+    ViewData["Data"] = "Edit Post";
+    ViewBag.Identity = Model.Identity;
+     string photoPath = "~/images/" + (Model.ExistingPhotoPath ?? "noimage.jpg");
+}
+
+<div class="post-wrapper">
+<h1>Share your mdedical tips</h1>
+<div class="post-container">
+    <form enctype="multipart/form-data" method="post" asp-action="edit" asp-controller="Post" class="post-form">
+    <div asp-validation-summary="All" style="color: red"></div>
+
+     <div class="details-img">
+    <img src="@photoPath" asp-append-version="true" />
+    </div>
+
+      <div class="upload-img post-items">
+            <p>Upload new image</p>
+             <input asp-for="Photo"  class="custom-file"/>
+      </div>
+      <div class="post-items">
+          <p>Title</p>
+          <input asp-for="Title" class="post-title" /> 
+      </div>
+      <div class="post-items">
+          <p>Content</p>
+          <textarea asp-for="Content" class="post-content"></textarea>
+          <span asp-validation-for="Content" style="color: red"></span>
+      </div>
+    <input hidden asp-for="Id" />
+    <input hidden asp-for="ExistingPhotoPath" />
+        <div>
+            <input type="submit" value="Update" class="btn btn-edit"/>
+            <a asp-controller="home" asp-action="details" asp-route-id="@Model.Id" class="btn btn-cancel">Cancel</a>
+        </div> 
+</form>
+</div>
+
+</div>

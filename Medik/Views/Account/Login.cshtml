@@ -1,0 +1,28 @@
+﻿@model LoginViewModel
+@{
+	ViewData["Title"] = "Login page"; 
+}
+
+<section class="form-wrapper">
+    <div class="form-wrapper-heading">
+        <h1>Login</h1>
+    </div>
+    <div class="form-container">
+        <form asp-action="Login" asp-controller="Account" method="post">
+            <div asp-validation-summary="ModelOnly" style="color: red"></div>
+            <div class="form-items">
+                <p>Email</p>
+                <input asp-for="Email" class="form-input" />
+                 <p><span asp-validation-for="Email" style="color: red; font-size: 12px;"></span></p>
+            </div>       
+            <div class="form-items">
+                <p>Password</p>
+                <input asp-for="Password" class="form-input" />
+                 <p><span asp-validation-for="Password" style="color: red; font-size: 12px;"></span></p>
+             </div>
+            <div class="form-items">
+                <input type="submit" value="Login" class="form-btn"/>
+            </div>          
+     </form>
+    </div>
+</section>

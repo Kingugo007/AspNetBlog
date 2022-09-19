@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "ed4f9af7-6071-4771-a704-87bfbbd3401e",
+    "FirstName": "Ugochukwu",
+    "LastName": "Oluo",
+    "Email": "digitalpointblog@gmail.com",
+    "Password": "ugo@123",
+    "CreatedDate": "2022-08-18T19:21:01.5088543+01:00"
+  },
+  {
+    "Id": "061ff9bd-aab7-4dc5-a647-6efa067d2b33",
+    "FirstName": "Ugochukwu",
+    "LastName": "Oluo",
+    "Email": "ugo@gmail.com",
+    "Password": "ugo@123",
+    "CreatedDate": "2022-08-19T18:20:40.8734436+01:00"
+  },
+  {
+    "Id": "81e2c6d7-95fc-4fa1-8c91-fcf73fdbbae9",
+    "FirstName": "Ugochukwu",
+    "LastName": "Oluo",
+    "Email": "ans@gmail.com",
+    "Password": "edb36ef7543d17eb8d160c1f66329bd0cc95175f71e7efd3267a181cf90b3b2b",
+    "CreatedDate": "2022-08-19T18:38:41.1512783+01:00"
+  },
+  {
+    "Id": "9081083e-e47d-4126-a5b2-de66a5b288ba",
+    "FirstName": "Dozie",
+    "LastName": "Opara",
+    "Email": "opara@gmail.com",
+    "Password": "edb36ef7543d17eb8d160c1f66329bd0cc95175f71e7efd3267a181cf90b3b2b",
+    "CreatedDate": "2022-08-20T11:26:31.3253+01:00"
+  },
+  {
+    "Id": "4b8167b6-c2ae-4a6a-8afe-d4386a921e02",
+    "FirstName": "Ugochukwu",
+    "LastName": "Oluo",
+    "Email": "ans1@gmail.com",
+    "Password": "edb36ef7543d17eb8d160c1f66329bd0cc95175f71e7efd3267a181cf90b3b2b",
+    "CreatedDate": "2022-08-21T22:31:02.0729987+01:00"
+  },
+  {
+    "Id": "c2daea25-35c6-4d17-854a-37f1b51050a8",
+    "FirstName": "Ugochukwu",
+    "LastName": "Oluo",
+    "Email": "ugoboss@gmail.com",
+    "Password": "edb36ef7543d17eb8d160c1f66329bd0cc95175f71e7efd3267a181cf90b3b2b",
+    "CreatedDate": "2022-08-23T18:02:30.5864151+01:00"
+  }
+]

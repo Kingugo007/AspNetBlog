@@ -1,0 +1,31 @@
+[
+    {
+        "Id": "1",
+        "FullName": "SUSAN VADAPARAMPIL", 
+        "Email": "susan@gmail.com",
+        "Age": 30,
+        "Profession": "Doctor",
+        "Degree": "PHD",
+        "Phone": "08136127343",
+        "Image": "https://images.pexels.com/photos/3846009/pexels-photo-3846009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "CreatedAt": "2022-07-27T07:00:30.9032976+01:00",
+        "LastUpdatedAt": "2022-07-27T07:00:30.9032976+01:00",
+        "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        
+    },
+    {
+        "Id": "2",
+        "FullName": "John Doe",
+        "Age": 26, 
+        "Email": "john@gmail.com",
+        "Profession": "Doctor",
+        "Degree": "PHD",
+        "Phone": "08136127343",
+        "Image": "https://images.pexels.com/photos/5214955/pexels-photo-5214955.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "CreatedAt": "2022-07-27T07:00:30.9032976+01:00",
+        "LastUpdatedAt": "2022-07-27T07:00:30.9032976+01:00",
+        "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        
+    }
+  
+]

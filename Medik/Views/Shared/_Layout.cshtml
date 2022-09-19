@@ -1,0 +1,86 @@
+﻿@{
+    string identity = ViewBag.Identity;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Medik</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <main>
+    <header class="nav">
+      <div class="nav-logo">
+          <a asp-action="index" asp-controller="home"> <img src="~/images/logo.png" alt="logo" /></a>
+       </div>
+       <div class="nav-links">
+           <ul class="nav-link-items">               
+                @if(identity != null)
+                {
+
+               <li><a asp-action="post" asp-controller="post"> Post Page</a></li>
+               <li>
+                <a asp-action="dashboard" asp-controller="account">dashboard</a>
+                </li>
+                          
+                <li>
+            
+               <form method="post" asp-action="logout" asp-controller="Account">
+                 <input type="submit" value="logout" class="logout-btn"/>
+               </form>
+              </li>                  
+                    }
+                    else
+                    {
+                         <li><a asp-action="register" asp-controller="account"> Register</a></li>
+               <li><a asp-action="login" asp-controller="account"> Login</a></li>
+                
+                    }
+                </ul>
+                @if(identity != null){
+                    <p class="welcome">Hi! @identity</p> 
+                }                 
+       </div>     
+    </header>
+            
+    @RenderBody()
+     
+
+<section class="footer">
+<div class="footer-img">
+<img src="~/images/logo-white.png" alt="logo" class="footer-logo" />
+<div class="icon-container">
+<img src="~/images/instagram-icon.png"/>
+<img src="~/images/fb-icon.png"/>
+<img src="~/images/twitter-icon.png" />
+<img src="~/images/youtube-icon.png"/>
+</div>
+</div>
+</section>
+<section class="footer-2">
+<div class="footer-text">
+<p>Thank you for subscribing to our newsletter. [Your company name] team will work hard to deliver good quality information in the fields you have specified upon subscription.
+ However, if you decide that you no longer want to receive such emails from us, feel free to click the link below.</p>
+</div>
+<div class="subscription">
+<a href="#">Unsubscribe</a>
+<a href="#">View in the browser</a>
+</div>
+</section>
+    
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/lib/jquery/dist/jquery.js" asp-append-version="true"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js" asp-append-version="true"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+
+</main>
+</body>
+</html>

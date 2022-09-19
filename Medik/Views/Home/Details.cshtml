@@ -1,0 +1,30 @@
+﻿@model DetailsViewModel
+@{
+    ViewBag.Identity = Model.Identity;
+    ViewData["Title"] = "Posts Page";
+    string photoPath = "~/images/" + (Model.Post.Image ?? "noimage.jpg"); 
+}
+
+<div class="details-wrapper">
+ <h1>@Model.Post.Title</h1>
+ <div class="details-img">
+   <img src=@photoPath alt="post image"  asp-append-version=true/> 
+ </div>
+ <h3>@Model.Post.Title <span class="time">  Posted @Model.Post.CreatedAt.ToString("dd, MM/dd/yyyy, HH:mm")</span> 
+        @if(Model.Post.LastUpdatedAt.ToString("dd, MM/dd/yyyy, HH:mm") != null)
+        {
+             <span class="time" style="color: cornflowerblue">  Last updated at @Model.Post.LastUpdatedAt.ToString("dd, MM/dd/yyyy, HH:mm")</span> 
+        }      
+    </h3>
+<p>@Model.Post.Content</p>
+
+    @if(ViewBag.Identity != null)
+    {
+   <div class="btn-container">
+   <a asp-action="edit" asp-controller="post" asp-route-id="@Model.Post.Id" class="btn btn-edit">Edit</a>
+   <a asp-action="delete" asp-controller="post" asp-route-id="@Model.Post.Id" class="btn btn-delete">Delete</a>
+   </div>
+    }
+
+
+</div>

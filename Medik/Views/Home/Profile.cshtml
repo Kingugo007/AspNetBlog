@@ -1,0 +1,27 @@
+﻿@model DetailsViewModel
+@{
+    ViewData["Title"] = "Profile";
+    ViewBag.Identity = Model.Identity;
+}
+
+<section class="profile-wrapper">
+    <div class="profile">
+    <h1>Doctor's Profile</h1>
+    <div class="doc-info">
+        <div class="doc-img">
+         <img src=@Model.Comment.Image alt="Doctors image" asp-append-version="true" />
+        </div>
+        <div class="doc-details">
+        <h2>@Model.Comment.FullName</h2>
+        <h5>Email : @Model.Comment.Email</h5>
+        <h5>Age: @Model.Comment.Age</h5>
+        <h5>Degree : @Model.Comment.Degree</h5>
+        </div>
+    </div>
+   <div class="doc-content">
+   <p>@Model.Comment.Content</p>
+   </div>
+</div>
+</section>
+
+
